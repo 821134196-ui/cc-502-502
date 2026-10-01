@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>可循环周转箱台账</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <b>周转箱循环台账</b>
+      <span>发箱 · 返箱 · 押金 · 维修</span>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#dashboard"><span class="ic">▦</span>总览</a>
+      <a href="#customers"><span class="ic">▤</span>客户箱账</a>
+      <a href="#issue"><span class="ic">↑</span>发箱扫描</a>
+      <a href="#return"><span class="ic">↓</span>返箱验收</a>
+      <a href="#repair"><span class="ic">🔧</span>维修池</a>
+      <a href="#overdue"><span class="ic">⏱</span>逾期清单</a>
+      <a href="#ledger"><span class="ic">¥</span>押金流水</a>
+    </nav>
+    <div class="rolebox">
+      <label>当前角色（决定可执行操作）</label>
+      <select id="roleSel">
+        <option value="warehouse">仓库（实物）</option>
+        <option value="finance">财务（折抵）</option>
+        <option value="admin">管理员（全部）</option>
+      </select>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <h1 id="pageTitle">总览</h1>
+      <span class="sub" id="pageSub"></span>
+      <span class="sp"></span>
+      <span class="badge-role" id="roleBadge"></span>
+    </header>
+    <main class="content" id="view"></main>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
